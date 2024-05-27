@@ -34,12 +34,16 @@ function PublicationFooter(props: any) {
             &copy;{new Date().getFullYear()} {title || `${authorName}'s Blog`}
           </p>
           <div className="flex flex-row items-center text-slate-600 dark:text-slate-300">
-            <a href="https://hashnode.com/privacy?source=blog-footer" className="mx-2 underline">
+            <a href="/privacy?source=blog-footer" className="mx-2 underline">
               Privacy policy
             </a>
             <span className="font-extrabold text-black opacity-20 dark:text-white">&middot;</span>
-            <a className="mx-2 underline" href="https://hashnode.com/terms?source=blog-footer">
+            <a className="mx-2 underline" href="/terms?source=blog-footer">
               Terms
+            </a>
+            <span className="font-extrabold text-black opacity-20 dark:text-white">&middot;</span>
+            <a className="mx-2 underline" href="/newsletter?source=blog-footer">
+              Newsletter
             </a>
           </div>
         </div>
@@ -60,21 +64,21 @@ function PublicationFooter(props: any) {
         ) : (
           <div className="flex flex-col items-center">
             <Link
-              aria-label="Publish with Hashnode"
+              aria-label="Code by Anil Shrestha"
               className="mb-4 flex flex-row items-center rounded-lg border border-slate-300 bg-white p-3 font-heading font-bold tracking-wide text-slate-600 transition-colors duration-75 hover:border-slate-400 hover:text-slate-900 dark:border-slate-800 dark:bg-black dark:text-slate-300 dark:hover:border-slate-500 dark:hover:text-white"
-              href="https://hashnode.com/onboard?unlock-blog=true&source=blog-footer"
+              href="/?unlock-blog=true&source=blog-footer"
             >
               <span className="mr-2 block text-blue-600">
                 <HashnodeLogoIconV2 className="h-6 w-6 fill-current" />
               </span>
-              <span>Publish with Hashnode</span>
+              <span>Code by Anil Shrestha</span>
             </Link>
             <p className="text-sm text-slate-600 dark:text-slate-300">
               Powered by{' '}
-              <a aria-label="Hashnode" href="https://hashnode.com?source=blog-footer" className="underline">
-                Hashnode
+              <a aria-label="Hashnode" href="https://nodejs.org/en" className="underline">
+                Node.js
               </a>{' '}
-              - Home for tech writers and readers
+              - Home for Students and Coder
             </p>
           </div>
         )}

@@ -74,15 +74,15 @@ export default function Post({ publication, posts, tag, slug, currentMenuId }: P
 						<div className="flex w-full flex-col items-start xl:w-auto xl:items-end xl:text-right">
 							<a
 								className="mb-2 flex flex-row items-center whitespace-nowrap rounded-lg border bg-white px-4 py-2 font-medium text-blue-600 hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700"
-								href={`https://hashnode.com/n/${tag.slug}`}
-								aria-label="See more articles from tag on Hashnode"
+								href="https://www.instagram.com/anilstha662"
+								aria-label="Request similer content to author."
 								target="_Blank"
 								rel="noopener"
 							>
-								<span>More content</span>
+								<span>Request content</span>
 								<ExternalLinkSVG className="ml-1 h-4 w-4 fill-current" />
 							</a>
-							<p className="text-sm text-slate-700 dark:text-slate-400">Read more stories on Hashnode</p>
+							<p className="text-sm text-slate-700 dark:text-slate-400">Request similer content to author</p>
 						</div>
 						)}
 						</div>

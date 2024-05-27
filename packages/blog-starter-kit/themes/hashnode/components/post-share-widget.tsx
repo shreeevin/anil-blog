@@ -127,23 +127,7 @@ const PostShareWidget = (props: PostShareWidgetProps) => {
               </span>
               <span className="px-2 font-normal text-slate-700 dark:text-slate-100">Twitter</span>
             </a>
-          </DropdownItem>
-          <DropdownItem className="outline-none!" asChild>
-            <a
-              href={`http://www.reddit.com/submit?url=${encodeURIComponent(absolutePostURL)}&title=${encodeURIComponent(
-                entity.title,
-              )}`}
-              onClick={() => {}}
-              target="_blank"
-              rel="noopener"
-              className={twMerge(dropdownMenu, 'flex flex-wrap rounded px-2 font-normal dark:hover:bg-slate-800')}
-            >
-              <span className="flex h-5 w-5 items-center justify-center">
-                <RedditSVGV2 className="h-7 w-4 fill-current text-slate-600 dark:text-slate-200" />
-              </span>
-              <span className="px-2 font-normal text-slate-700 dark:text-slate-100">Reddit</span>
-            </a>
-          </DropdownItem>
+          </DropdownItem>          
           <DropdownItem className="outline-none!" asChild>
             <a
               href={`https://www.linkedin.com/cws/share?url=${encodeURIComponent(absolutePostURL)}`}
@@ -157,23 +141,7 @@ const PostShareWidget = (props: PostShareWidgetProps) => {
               </span>
               <span className="px-2 font-normal text-slate-700 dark:text-slate-100">LinkedIn</span>
             </a>
-          </DropdownItem>
-          <DropdownItem className="outline-none!" asChild>
-            <a
-              href={`http://news.ycombinator.com/submitlink?u=${encodeURIComponent(
-                absolutePostURL,
-              )}&t=${encodeURIComponent(entity.title)}`}
-              onClick={() => {}}
-              target="_blank"
-              rel="noopener"
-              className={twMerge(dropdownMenu, 'flex flex-wrap rounded px-2 font-normal dark:hover:bg-slate-800')}
-            >
-              <span className="flex h-5 w-5 items-center justify-center">
-                <HackernewsSVGV2 className="h-5 w-4 fill-current text-slate-600 dark:text-slate-200" />
-              </span>
-              <span className="px-2 font-normal text-slate-700 dark:text-slate-100">Hacker News</span>
-            </a>
-          </DropdownItem>
+          </DropdownItem>      
           <DropdownItem className="outline-none!" asChild>
             <a
               href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(absolutePostURL)}`}

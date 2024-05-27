@@ -43,7 +43,7 @@ function OtherPostsOfAccount(props: Props) {
                   />
                 </div>
                 <a
-                  href={`https://hashnode.com/@${post.author.username}`}
+                  href="/about"
                   className="blog-similar-author-name font-bold text-black dark:text-white"
                 >
                   {post.author.name}

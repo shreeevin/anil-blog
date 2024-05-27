@@ -80,7 +80,7 @@ function BlogPostPreview(props: {
             {publication.isTeam && (
               <div className="mb-4 flex w-full flex-row items-center">
                 <a
-                  href={`https://hashnode.com/@${post.author.username}`}
+                  href="/about"
                   className="blog-post-card-author-pic mr-2 block h-8 w-8 overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800"
                 >
                   <Image
@@ -92,7 +92,7 @@ function BlogPostPreview(props: {
                   />
                 </a>
                 <a
-                  href={`https://hashnode.com/@${post.author.username}`}
+                  href="/about"
                   className="blog-post-card-author-name text-lg font-medium text-slate-800 dark:text-slate-200"
                 >
                   {post.author.name}
