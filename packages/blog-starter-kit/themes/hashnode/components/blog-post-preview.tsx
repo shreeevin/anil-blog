@@ -78,25 +78,27 @@ function BlogPostPreview(props: {
             )}
           >
             {publication.isTeam && (
-              <div className="mb-4 flex w-full flex-row items-center">
-                <a
-                  href="/about"
-                  className="blog-post-card-author-pic mr-2 block h-8 w-8 overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800"
-                >
-                  <Image
-                    alt={post.author.name}
-                    className="block w-full"
-                    width={72}
-                    height={72}
-                    src={resizeImage(post.author.profilePicture || DEFAULT_AVATAR, { w: 72, h: 72, c: 'face' })}
-                  />
-                </a>
-                <a
-                  href="/about"
-                  className="blog-post-card-author-name text-lg font-medium text-slate-800 dark:text-slate-200"
-                >
-                  {post.author.name}
-                </a>
+              <div className="mb-4 flex w-full flex-row items-center">                
+                <Link
+                    href="/about"
+                    className="blog-post-card-author-pic mr-2 block h-8 w-8 overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800"
+                    onFocus={() => undefined}                        
+                  >
+                    <Image
+                      alt={post.author.name}
+                      className="block w-full"
+                      width={72}
+                      height={72}
+                      src={resizeImage(post.author.profilePicture || DEFAULT_AVATAR, { w: 72, h: 72, c: 'face' })}
+                    />
+                  </Link>
+                  <Link
+                    href="/about"
+                    className="blog-post-card-author-name text-lg font-medium text-slate-800 dark:text-slate-200"
+                    onFocus={() => undefined}                        
+                  >
+                    {post.author.name}
+                  </Link>                
               </div>
             )}
             {layout === 'grid' && post.id === pinnedPostId && (

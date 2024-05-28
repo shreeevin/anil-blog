@@ -1,5 +1,7 @@
 import { twJoin } from 'tailwind-merge';
 
+import Link from 'next/link';
+
 import { resizeImage } from '../utils/image';
 import ProfileImage from './profile-image';
 import CustomImage from './custom-image';
@@ -42,12 +44,14 @@ function OtherPostsOfAccount(props: Props) {
                     hoverDisabled={true}
                   />
                 </div>
-                <a
-                  href="/about"
-                  className="blog-similar-author-name font-bold text-black dark:text-white"
-                >
-                  {post.author.name}
-                </a>
+                
+                <Link
+                    href="/about"
+                    className="blog-similar-author-name font-bold text-black dark:text-white"
+                    onFocus={() => undefined}                        
+                  >
+                    {post.author.name}
+                </Link> 
               </div>
             </div>
           )}

@@ -2,6 +2,8 @@ import request from 'graphql-request';
 import ErrorPage from 'next/error';
 import Head from 'next/head';
 import moment from 'dayjs';
+import Link from 'next/link';
+
 
 import { Container } from '../../components/container';
 import { AppProvider } from '../../components/contexts/appContext';
@@ -145,13 +147,14 @@ export default function Post({ publication, draft }: Props) {
 										<div className="mb-5 flex w-full flex-row items-center justify-center md:mb-0 md:w-auto md:justify-start">
 											<div className="mr-2 h-10 w-10 overflow-hidden rounded-full bg-slate-200 dark:bg-white/20 md:mr-3 md:h-12 md:w-12">
 											<ProfileImage user={draft.author} width="200" height="200" hoverDisabled={true} />
-											</div>
-											<a
-											href="/"
-											className="font-medium text-slate-900 dark:text-white"
+											</div>										
+											<Link
+												href="/about"
+												className="font-medium text-slate-900 dark:text-white"
+												onFocus={() => undefined}                        
 											>
-											<span>{draft.author.name}</span>
-											</a>
+												<span>{draft.author.name}</span>
+											</Link>
 										</div>
 										<div className="mb-5 flex w-full flex-row items-center justify-center md:mb-0 md:w-auto md:justify-start">
 											<span className="mx-3 hidden font-bold text-slate-500 md:block">&middot;</span>

@@ -100,25 +100,28 @@ const FeaturedPosts = (props: {
                 </p>
               )}
               <div className="blog-article-card-author-strip mx-4 flex flex-row flex-wrap items-center">
-                <a
-                  href="/about"
-                  className="blog-article-card-author-photo mr-2 block h-8 w-8 overflow-hidden rounded-full bg-slate-100 dark:border-slate-800 dark:bg-slate-900"
-                >
-                  <Image
-                    alt={post.author.name || 'Author'}
-                    className="block"
-                    width={72}
-                    height={72}
-                    src={resizeImage(post.author.profilePicture || DEFAULT_AVATAR, { w: 72, h: 72, c: 'face' })}
-                  />
-                </a>
-                <div className="flex flex-col items-start leading-snug">
-                  <a
-                    className="blog-article-card-author-name block font-semibold text-slate-700 dark:text-slate-400"
+                <Link
                     href="/about"
+                    className="blog-article-card-author-photo mr-2 block h-8 w-8 overflow-hidden rounded-full bg-slate-100 dark:border-slate-800 dark:bg-slate-900"
+                    onFocus={() => undefined}                        
+                  >
+                    <Image
+                      alt={post.author.name || 'Author'}
+                      className="block"
+                      width={72}
+                      height={72}
+                      src={resizeImage(post.author.profilePicture || DEFAULT_AVATAR, { w: 72, h: 72, c: 'face' })}
+                    />
+                </Link> 
+                <div className="flex flex-col items-start leading-snug">
+                  
+                  <Link
+                    href="/about"
+                    className="blog-article-card-author-name block font-semibold text-slate-700 dark:text-slate-400"
+                    onFocus={() => undefined}                        
                   >
                     {post.author.name}
-                  </a>
+                  </Link> 
                   <div className="blog-article-card-article-meta flex flex-row text-sm">
                     {publication.features.readTime.isEnabled && post.readTimeInMinutes ? (
                       <p className="text-slate-500 dark:text-slate-400">

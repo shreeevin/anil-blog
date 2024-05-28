@@ -34,17 +34,29 @@ function PublicationFooter(props: any) {
             &copy;{new Date().getFullYear()} {title || `${authorName}'s Blog`}
           </p>
           <div className="flex flex-row items-center text-slate-600 dark:text-slate-300">
-            <a href="/privacy?source=blog-footer" className="mx-2 underline">
-              Privacy policy
-            </a>
+            <Link
+                href="/privacy?source=blog-footer"
+                className="mx-2 underline"
+                onFocus={() => undefined}                        
+              >
+                Privacy policy
+            </Link>            
             <span className="font-extrabold text-black opacity-20 dark:text-white">&middot;</span>
-            <a className="mx-2 underline" href="/terms?source=blog-footer">
+            <Link
+              href="/terms?source=blog-footer"
+              className="mx-2 underline"
+              onFocus={() => undefined}                        
+            >
               Terms
-            </a>
+            </Link>            
             <span className="font-extrabold text-black opacity-20 dark:text-white">&middot;</span>
-            <a className="mx-2 underline" href="/newsletter?source=blog-footer">
-              Newsletter
-            </a>
+            <Link
+                href="/newsletter?source=blog-footer"
+                className="mx-2 underline"
+                onFocus={() => undefined}                        
+              >
+                Newsletter
+            </Link>            
           </div>
         </div>
         {disableFooterBranding ? (

@@ -1,6 +1,8 @@
 import { twJoin } from 'tailwind-merge';
 
 import CustomImage from './custom-image';
+import Link from 'next/link';
+
 import { getBlurHash, resizeImage } from '../utils/image';
 
 function PostAuthorInfo(props: any) {
@@ -12,31 +14,32 @@ function PostAuthorInfo(props: any) {
     <div className="flex w-full flex-1 flex-col md:flex-row">
       <div className="mb-4 flex w-full flex-1 flex-row md:mb-0 ">
         <div className="mr-4 flex flex-row md:mb-0">
-          <a
-            href="/about"
-            className="block h-10 w-10 overflow-hidden rounded-full border dark:border-slate-800 md:h-14 md:w-14"
-          >
-            <CustomImage
-              className="block"
-              placeholder="blur"
-              originalSrc={author.profilePicture}
-              src={resizeImage(author.profilePicture, {
-                w: 256,
-                h: 256,
-                c: 'thumb',
-              })}
-              blurDataURL={getBlurHash(
-                resizeImage(author.profilePicture, {
+          <Link
+              href="/about"
+              className="block h-10 w-10 overflow-hidden rounded-full border dark:border-slate-800 md:h-14 md:w-14"
+              onFocus={() => undefined}                        
+            >
+              <CustomImage
+                className="block"
+                placeholder="blur"
+                originalSrc={author.profilePicture}
+                src={resizeImage(author.profilePicture, {
                   w: 256,
                   h: 256,
                   c: 'thumb',
-                }),
-              )}
-              width={256}
-              height={256}
-              alt={author.name}
-            />
-          </a>
+                })}
+                blurDataURL={getBlurHash(
+                  resizeImage(author.profilePicture, {
+                    w: 256,
+                    h: 256,
+                    c: 'thumb',
+                  }),
+                )}
+                width={256}
+                height={256}
+                alt={author.name}
+              />
+          </Link>          
         </div>
         <div
           className={twJoin(

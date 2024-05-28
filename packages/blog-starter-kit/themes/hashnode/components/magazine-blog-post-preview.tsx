@@ -62,15 +62,15 @@ function BlogPostPreview(props: {
         </Link>
       </h1>
       <div className="blog-article-card-author-strip mx-4 flex flex-row flex-wrap items-center">
-        <div className="flex flex-col items-start leading-snug">
-          <a
-            className="block font-semibold text-slate-700 dark:text-slate-400"
-            href="/about"
-            onMouseOver={preload}
-            onFocus={() => undefined}
-          >
-            {post.author.name}
-          </a>
+        <div className="flex flex-col items-start leading-snug">          
+          <Link
+              href="/about"
+              onMouseOver={preload}
+              className="block font-semibold text-slate-700 dark:text-slate-400"
+              onFocus={() => undefined}                        
+            >
+              {post.author.name}
+          </Link> 
           <div className="blog-article-card-article-meta flex flex-row text-sm">
             {publication.features.readTime.isEnabled && post.readTimeInMinutes ? (
               <>
