@@ -191,13 +191,14 @@ export const PostHeader = ({ post, morePosts }: Props) => {
 									<p className="truncate text-xs font-normal">+{post.coAuthors.length}</p>
 								</button>
 							)}
-							{!post.coAuthors?.length && (
-								<a
+							{!post.coAuthors?.length && (								
+								<Link
 									href="/about"
 									className="ml-2 font-semibold text-slate-600 dark:text-white md:ml-0"
+									onFocus={() => undefined}                        
 								>
 									<span>{post.author.name}</span>
-								</a>
+								</Link>
 							)}
 							{post.coAuthors && post.coAuthors.length > 0 && (
 								<button

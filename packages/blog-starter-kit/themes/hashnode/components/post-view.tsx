@@ -101,12 +101,13 @@ function PostView(props: any) {
                     <div className="mr-2 h-10 w-10 overflow-hidden rounded-full bg-slate-200 dark:bg-white/20 md:mr-3 md:h-12 md:w-12">
                     <ProfileImage user={post.author} width="200" height="200" hoverDisabled={props.isPublicationPost} />
                     </div>
-                    <a
+                    <Link
                         href="/about"
                         className="font-medium text-slate-900 dark:text-white"
+                        onFocus={() => undefined}                        
                     >
-                    <span>{post.author.name}</span>
-                    </a>
+                        <span>{post.author.name}</span>
+                    </Link>
                 </div>
                 <div className="mb-5 flex w-full flex-row items-center justify-center md:mb-0 md:w-auto md:justify-start">
                     <span className="mx-3 hidden font-bold text-slate-500 md:block">&middot;</span>
