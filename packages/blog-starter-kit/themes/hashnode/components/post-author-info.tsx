@@ -49,7 +49,12 @@ function PostAuthorInfo(props: any) {
         >
           <div className="flex flex-row items-center md:mb-1">
             <h1 className="font-sans text-lg font-semibold text-slate-800 dark:text-slate-100">
-              <a href="/about">{author.name}</a>
+              <Link
+                  href="/about"
+                  onFocus={() => undefined}                        
+                >
+                  {author.name}
+              </Link>
             </h1>
           </div>
           {author.bio?.html && (
