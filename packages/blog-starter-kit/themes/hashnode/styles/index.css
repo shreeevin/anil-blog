@@ -6,6 +6,9 @@
   width: 800px;
 }
 
+.ndfHFb-c4YZDc-Wrql6b{
+  display: none;
+}
 @media (max-width: 800px) {
   .article-width {
     width: 100% !important;
@@ -296,3 +299,4 @@ img.image--right {
     @apply ring-blue-600 ring-offset-white dark:ring-offset-slate-800;
   }
 }
+
