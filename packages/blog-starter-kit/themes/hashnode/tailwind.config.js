@@ -398,7 +398,7 @@ module.exports = {
 			  'overflow-wrap': 'anywhere',
 			},
       '.ndfHFb-c4YZDc-Wrql6b': {
-        'display': 'none';
+        'display': 'none',
       },
 		  });
 		}),
