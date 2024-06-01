@@ -397,6 +397,9 @@ module.exports = {
 			  'word-break': 'normal',
 			  'overflow-wrap': 'anywhere',
 			},
+      '.ndfHFb-c4YZDc-Wrql6b': {
+        'display': 'none';
+      },
 		  });
 		}),
 	],
