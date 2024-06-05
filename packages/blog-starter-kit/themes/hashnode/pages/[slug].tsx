@@ -55,7 +55,7 @@ const Post = ({ publication, post, morePosts }: PostProps) => {
 				if (iframeDocument) {
 					const elementsToHide = iframeDocument.querySelectorAll('.ndfHFb-c4YZDc-Wrql6b');
 					elementsToHide.forEach((element) => {
-						element.style.display = 'none';
+						(element as HTMLElement).style.display = 'none';
 					});
 					if (elementsToHide.length > 0) {
 						console.log(`Found and hid ${elementsToHide.length} elements with class ndfHFb-c4YZDc-Wrql6b`);
